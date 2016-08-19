@@ -27,7 +27,6 @@ public class LoginController {
         user.setUsername(account);
         user.setPassword(password);
        int userSaveIdentify =  userInfoService.insertByUser(user);
-        System.err.print("dsfdgfdgfdfgergvd");
         return map;
 
     }
