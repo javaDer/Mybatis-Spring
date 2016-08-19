@@ -27,7 +27,14 @@ public class LoginController {
         user.setUsername(account);
         user.setPassword(password);
        int userSaveIdentify =  userInfoService.insertByUser(user);
-        System.err.print("dsfdgfdgfdfgergvd");
+        if(userSaveIdentify>0){
+           map.put("success",true);
+           map.put("message","用户注册成功");
+        }else{
+            map.put("success",false);
+            map.put("message","用户注册失败");
+
+        }
         return map;
 
     }
