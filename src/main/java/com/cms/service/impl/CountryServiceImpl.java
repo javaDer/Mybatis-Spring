@@ -1,8 +1,8 @@
-package com.isea533.mybatis.service.impl;
+package com.cms.service.impl;
 
+import com.cms.model.Country;
 import com.github.pagehelper.PageHelper;
-import com.isea533.mybatis.model.Country;
-import com.isea533.mybatis.service.CountryService;
+import com.cms.service.CountryService;
 import org.springframework.stereotype.Service;
 import tk.mybatis.mapper.entity.Example;
 import tk.mybatis.mapper.util.StringUtil;

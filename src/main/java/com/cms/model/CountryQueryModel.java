@@ -22,10 +22,41 @@
  * THE SOFTWARE.
  */
 
-package com.isea533.mybatis.mapper;
+package com.cms.model;
 
-import com.isea533.mybatis.model.UserLoginInfo;
-import com.isea533.mybatis.util.MyMapper;
+public class CountryQueryModel extends QueryModel {
 
-public interface UserLoginInfoMapper extends MyMapper<UserLoginInfo> {
+    private Country country;
+
+    public CountryQueryModel() {
+        this(new Country());
+    }
+
+    public CountryQueryModel(Country country) {
+        this.country = country;
+    }
+
+    public Integer getId() {
+        return country.getId();
+    }
+
+    public void setId(Integer id) {
+        country.setId(id);
+    }
+
+    public String getCountrycode() {
+        return country.getCountrycode();
+    }
+
+    public void setCountrycode(String countrycode) {
+        country.setCountrycode(countrycode);
+    }
+
+    public String getCountryname() {
+        return country.getCountryname();
+    }
+
+    public void setCountryname(String countryname) {
+        country.setCountryname(countryname);
+    }
 }

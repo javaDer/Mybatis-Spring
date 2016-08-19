@@ -22,11 +22,10 @@
  * THE SOFTWARE.
  */
 
-package com.isea533.mybatis.mapper;
+package com.cms.mapper;
 
-import com.isea533.mybatis.model.Country;
-import com.isea533.mybatis.util.MyMapper;
+import com.cms.model.UserLoginInfo;
+import com.cms.util.MyMapper;
 
-public interface CountryMapper extends MyMapper<Country> {
-
+public interface UserLoginInfoMapper extends MyMapper<UserLoginInfo> {
 }

@@ -22,99 +22,83 @@
  * THE SOFTWARE.
  */
 
-package com.isea533.mybatis.model;
+package com.cms.model;
 
-import javax.persistence.*;
-import java.util.Date;
+import javax.persistence.Column;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 
-@Table(name = "`user login info`")
-public class UserLoginInfo {
+public class Country {
+    /**
+     * 主键
+     */
     @Id
     @Column(name = "Id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
     /**
-     * 登录名
+     * 名称
      */
-    @Id
-    private String username;
+    private String countryname;
 
     /**
-     * 登录时间
+     * 代码
      */
-    private Date logindate;
+    private String countrycode;
 
     /**
-     * 登录IP
-     */
-    private String loginip;
-
-    /**
-     * @return Id
+     * 获取主键
+     *
+     * @return Id - 主键
      */
     public Integer getId() {
         return id;
     }
 
     /**
-     * @param id
+     * 设置主键
+     *
+     * @param id 主键
      */
     public void setId(Integer id) {
         this.id = id;
     }
 
     /**
-     * 获取登录名
+     * 获取名称
      *
-     * @return username - 登录名
+     * @return countryname - 名称
      */
-    public String getUsername() {
-        return username;
+    public String getCountryname() {
+        return countryname;
     }
 
     /**
-     * 设置登录名
+     * 设置名称
      *
-     * @param username 登录名
+     * @param countryname 名称
      */
-    public void setUsername(String username) {
-        this.username = username;
+    public void setCountryname(String countryname) {
+        this.countryname = countryname;
     }
 
     /**
-     * 获取登录时间
+     * 获取代码
      *
-     * @return logindate - 登录时间
+     * @return countrycode - 代码
      */
-    public Date getLogindate() {
-        return logindate;
+    public String getCountrycode() {
+        return countrycode;
     }
 
     /**
-     * 设置登录时间
+     * 设置代码
      *
-     * @param logindate 登录时间
+     * @param countrycode 代码
      */
-    public void setLogindate(Date logindate) {
-        this.logindate = logindate;
-    }
-
-    /**
-     * 获取登录IP
-     *
-     * @return loginip - 登录IP
-     */
-    public String getLoginip() {
-        return loginip;
-    }
-
-    /**
-     * 设置登录IP
-     *
-     * @param loginip 登录IP
-     */
-    public void setLoginip(String loginip) {
-        this.loginip = loginip;
+    public void setCountrycode(String countrycode) {
+        this.countrycode = countrycode;
     }
 }

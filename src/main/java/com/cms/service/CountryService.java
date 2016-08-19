@@ -1,6 +1,6 @@
-package com.isea533.mybatis.service;
+package com.cms.service;
 
-import com.isea533.mybatis.model.Country;
+import com.cms.model.Country;
 
 import java.util.List;
 

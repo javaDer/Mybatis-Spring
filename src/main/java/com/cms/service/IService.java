@@ -22,50 +22,29 @@
  * THE SOFTWARE.
  */
 
-package com.isea533.mybatis.service.impl;
+package com.cms.service;
 
-import com.isea533.mybatis.service.IService;
-import org.springframework.beans.factory.annotation.Autowired;
-import tk.mybatis.mapper.common.Mapper;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 /**
- * Created by liuzh on 2014/12/11.
+ * 通用接口
  */
-public abstract class BaseService<T> implements IService<T> {
+@Service
+public interface IService<T> {
 
-    @Autowired
-    protected Mapper<T> mapper;
+    T selectByKey(Object key);
 
-    public Mapper<T> getMapper() {
-        return mapper;
-    }
+    int save(T entity);
 
-    @Override
-    public T selectByKey(Object key) {
-        return mapper.selectByPrimaryKey(key);
-    }
+    int delete(Object key);
 
-    public int save(T entity) {
-        return mapper.insert(entity);
-    }
+    int updateAll(T entity);
 
-    public int delete(Object key) {
-        return mapper.deleteByPrimaryKey(key);
-    }
+    int updateNotNull(T entity);
 
-    public int updateAll(T entity) {
-        return mapper.updateByPrimaryKey(entity);
-    }
-
-    public int updateNotNull(T entity) {
-        return mapper.updateByPrimaryKeySelective(entity);
-    }
-
-    public List<T> selectByExample(Object example) {
-        return mapper.selectByExample(example);
-    }
+    List<T> selectByExample(Object example);
 
     //TODO 其他...
 }

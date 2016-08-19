@@ -1,8 +1,8 @@
-package com.isea533.mybatis.controller.demo;
+package com.cms.controller;
 
 import com.github.pagehelper.PageInfo;
-import com.isea533.mybatis.model.Country;
-import com.isea533.mybatis.service.CountryService;
+import com.cms.model.Country;
+import com.cms.service.CountryService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;

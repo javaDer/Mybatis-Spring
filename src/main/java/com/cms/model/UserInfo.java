@@ -22,7 +22,7 @@
  * THE SOFTWARE.
  */
 
-package com.isea533.mybatis.model;
+package com.cms.model;
 
 import javax.persistence.*;
 

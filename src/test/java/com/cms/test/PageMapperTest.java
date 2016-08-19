@@ -22,12 +22,12 @@
  * THE SOFTWARE.
  */
 
-package com.isea533.mybatis.test;
+package com.cms.test;
 
+import com.cms.model.Country;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
-import com.isea533.mybatis.mapper.CountryMapper;
-import com.isea533.mybatis.model.Country;
+import com.cms.mapper.CountryMapper;
 import org.apache.ibatis.session.SqlSession;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;

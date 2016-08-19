@@ -1,4 +1,4 @@
-package com.isea533.mybatis.test;
+package com.cms.test;
 
 import org.junit.runner.RunWith;
 import org.springframework.test.context.ContextConfiguration;

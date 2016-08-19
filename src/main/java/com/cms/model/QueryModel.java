@@ -1,4 +1,4 @@
-package com.isea533.mybatis.model;
+package com.cms.model;
 
 /**
  * @author liuzh_3nofxnp
