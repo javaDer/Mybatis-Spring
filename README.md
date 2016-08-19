@@ -33,7 +33,3 @@
 - 作者邮箱：abel533@gmail.com
 
 - Mybatis工具群： 211286137 (Mybatis相关工具插件等等)
-
-## --------------以上为abel533作者原创------------------------------------------------
-## 集成jetty 运行环境 以后使用mui做客户端开发一款APP
-## https://github.com/javaDer/Mybatis-Spring
