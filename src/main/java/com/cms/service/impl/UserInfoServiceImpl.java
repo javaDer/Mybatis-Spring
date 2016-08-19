@@ -12,10 +12,10 @@ import javax.annotation.Resource;
  * Created by lsh on 2016/8/19.
  */
 @Service("userInfoService")
-public class UserInfoServiceImpl extends BaseService<UserInfo> implements UserInfoService
-{
+public class UserInfoServiceImpl extends BaseService<UserInfo> implements UserInfoService {
     @Resource
     private UserInfoMapper userInfoDao;
+
     @Override
     public int insertByUser(UserInfo user) {
         return userInfoDao.insertSelective(user);
