@@ -58,6 +58,8 @@ public class UserInfo {
      */
     private String realname;
 
+    private String openid;
+
     /**
      * QQ
      */
@@ -222,5 +224,13 @@ public class UserInfo {
      */
     public void setTel(String tel) {
         this.tel = tel;
+    }
+
+    public String getOpenid() {
+        return openid;
+    }
+
+    public void setOpenid(String openid) {
+        this.openid = openid;
     }
 }

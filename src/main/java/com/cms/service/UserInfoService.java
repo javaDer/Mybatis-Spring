@@ -8,4 +8,6 @@ import com.cms.model.UserInfo;
 public interface UserInfoService extends IService<UserInfo> {
 
     int  insertByUser(UserInfo user);
+
+    boolean selectByUserName(String account);
 }

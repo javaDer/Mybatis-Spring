@@ -15,9 +15,20 @@ import javax.annotation.Resource;
 public class UserInfoServiceImpl extends BaseService<UserInfo> implements UserInfoService {
     @Resource
     private UserInfoMapper userInfoDao;
-
     @Override
     public int insertByUser(UserInfo user) {
         return userInfoDao.insertSelective(user);
+    }
+
+    @Override
+    public boolean selectByUserName(String account) {
+        boolean isHadUserName = false;
+       UserInfo userInfo= userInfoDao.selectByUserName(account);
+        if(userInfo==null){
+            isHadUserName = false;
+        }else{
+            isHadUserName = true;
+        }
+        return isHadUserName;
     }
 }
