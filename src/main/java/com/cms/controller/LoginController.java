@@ -2,6 +2,8 @@ package com.cms.controller;
 
 import com.cms.model.UserInfo;
 import com.cms.service.UserInfoService;
+import com.cms.service.RedisService;
+import com.cms.model.TaotaoResult;
 import org.apache.commons.lang.RandomStringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -21,7 +23,8 @@ import java.util.Map;
 public class LoginController {
     @Autowired
     private UserInfoService userInfoService;
-
+    @Autowired
+    private RedisService redisService;
     //非第三方注册
     @RequestMapping(value = "/register")
     @ResponseBody
@@ -41,6 +44,7 @@ public class LoginController {
             map.put("openid", null);
         } else {
             int userSaveIdentify = userInfoService.insertByUser(user);
+            TaotaoResult result = redisService.save(user.getOpenid());
             if (userSaveIdentify > 0) {
                 map.put("success", true);
                 map.put("message", "用户注册成功");

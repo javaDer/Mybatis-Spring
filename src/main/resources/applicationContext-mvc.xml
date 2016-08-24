@@ -38,7 +38,6 @@
        http://www.springframework.org/schema/context/spring-context.xsd">
 
     <context:component-scan base-package="com.cms.service"/>
-    <!--<context:property-placeholder location="classpath:config.properties"  ignore-unresolvable="true"/>-->
     <bean id="propertyConfigurer" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
         <property name="locations">
             <list>
