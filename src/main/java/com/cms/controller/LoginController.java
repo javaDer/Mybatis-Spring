@@ -2,6 +2,8 @@ package com.cms.controller;
 
 import com.cms.model.UserInfo;
 import com.cms.service.UserInfoService;
+import com.cms.service.RedisService;
+import com.cms.model.TaotaoResult;
 import org.apache.commons.lang.RandomStringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -21,6 +23,8 @@ import java.util.Map;
 public class LoginController {
     @Autowired
     private UserInfoService userInfoService;
+    @Autowired
+    private RedisService redisService;
 
     //非第三方注册
     @RequestMapping(value = "/register")
@@ -29,29 +33,35 @@ public class LoginController {
         Map<String, Object> map = new HashMap<String, Object>();
         String openid = RandomStringUtils.randomAlphanumeric(10);
         UserInfo user = new UserInfo();
-        user.setEmail(email);
-        user.setUsername(account);
-        user.setPassword(password);
-        user.setUsertype("account");
-        user.setOpenid(openid);
-        //判断用户名是否存在
-        if (iscreateAccount(account)) {
-            map.put("success", false);
-            map.put("message", "用户名存在");
-            map.put("openid", null);
-        } else {
-            int userSaveIdentify = userInfoService.insertByUser(user);
-            if (userSaveIdentify > 0) {
-                map.put("success", true);
-                map.put("message", "用户注册成功");
-                map.put("openid", openid);
-            } else {
+        if (account != null && password != null && email != null) {
+            user.setEmail(email);
+            user.setUsername(account);
+            user.setPassword(password);
+            user.setUsertype("account");
+            user.setOpenid(openid);
+            //判断用户名是否存在
+            if (iscreateAccount(account)) {
                 map.put("success", false);
-                map.put("message", "用户注册失败");
+                map.put("message", "用户名存在");
                 map.put("openid", null);
+            } else {
+                int userSaveIdentify = userInfoService.insertByUser(user);
+                long resout = redisService.SetList(openid, account, email, password, "account");
+                if (userSaveIdentify > 0) {
+                    map.put("success", true);
+                    map.put("message", "用户注册成功");
+                    map.put("openid", openid);
+                } else {
+                    map.put("success", false);
+                    map.put("message", "用户注册失败");
+                    map.put("openid", null);
+                }
             }
+        }else{
+            map.put("success", false);
+            map.put("message", "数据错误");
+            map.put("openid", null);
         }
-
         return map;
     }
 
@@ -81,7 +91,6 @@ public class LoginController {
         boolean iscreate = userInfoService.selectByUserName(account);
         return iscreate;
     }
-
 
 }
 

@@ -130,8 +130,9 @@
   </bean>
 
   <!--文件上传-->
-  <bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
-    <property name="maxUploadSize" value="100000"/>
+  <bean id="multipartResolver"
+        class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+    <!-- 设置上传文件大小的参数 -->
+    <property name="maxUploadSize" value="1024000000" />
   </bean>
-
 </beans>
