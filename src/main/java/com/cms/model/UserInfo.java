@@ -233,4 +233,5 @@ public class UserInfo {
     public void setOpenid(String openid) {
         this.openid = openid;
     }
+
 }
