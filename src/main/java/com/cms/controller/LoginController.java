@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import tk.mybatis.mapper.entity.Example;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -41,6 +42,7 @@ public class LoginController {
         } else {
             int userSaveIdentify = userInfoService.insertByUser(user);
             if (userSaveIdentify > 0) {
+                //插入redis
                 map.put("success", true);
                 map.put("message", "用户注册成功");
                 map.put("openid", openid);
@@ -53,12 +55,27 @@ public class LoginController {
 
         return map;
     }
+
     //非第三方登录
     @RequestMapping(value = "/login")
     @ResponseBody
     public Map<String, Object> login(String account, String password) {
-
-        return null;
+        Map<String, Object> map = new HashMap<String, Object>();
+        Example example = new Example(UserInfo.class);
+        Example.Criteria criteria = example.createCriteria();
+        criteria.andEqualTo("username", account);
+        criteria.andEqualTo("password", password);
+        List<UserInfo> userInfoList = userInfoService.selectByExample(example);
+        if (userInfoList.size() > 0) {
+            UserInfo userInfo = userInfoList.get(0);
+            map.put("message", "用户登录成功");
+            map.put("success", true);
+            map.put("opneid", userInfo.getOpenid());
+        } else {
+            map.put("message", "用户名密码错误");
+            map.put("success", false);
+        }
+        return map;
     }
 
     public boolean iscreateAccount(String account) {
