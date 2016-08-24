@@ -42,7 +42,6 @@ public class LoginController {
         } else {
             int userSaveIdentify = userInfoService.insertByUser(user);
             if (userSaveIdentify > 0) {
-                //插入redis
                 map.put("success", true);
                 map.put("message", "用户注册成功");
                 map.put("openid", openid);
