@@ -1,7 +1,7 @@
 package com.cms.mapper;
 
 import com.cms.model.UserLoginInfo;
-import tk.mybatis.mapper.common.Mapper;
+import com.cms.util.MyMapper;
 
-public interface UserLoginInfoMapper extends Mapper<UserLoginInfo> {
+public interface UserLoginInfoMapper extends MyMapper<UserLoginInfo> {
 }

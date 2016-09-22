@@ -34,6 +34,8 @@ public class UserInfo {
      */
     private String realname;
 
+    private String openid;
+
     /**
      * QQ
      */
@@ -45,8 +47,6 @@ public class UserInfo {
      * 联系电话
      */
     private String tel;
-
-    private String openid;
 
     /**
      * @return Id

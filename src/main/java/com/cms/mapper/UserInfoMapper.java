@@ -1,7 +1,8 @@
 package com.cms.mapper;
 
 import com.cms.model.UserInfo;
-import tk.mybatis.mapper.common.Mapper;
+import com.cms.util.MyMapper;
 
-public interface UserInfoMapper extends Mapper<UserInfo> {
+public interface UserInfoMapper extends MyMapper<UserInfo> {
+    UserInfo selectByUserName(String account);
 }
