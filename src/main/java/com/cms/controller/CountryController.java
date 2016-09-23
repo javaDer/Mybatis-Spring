@@ -26,7 +26,7 @@ public class CountryController {
 
     private String redirect_list = "redirect:list";
 
-    @RequestMapping(value = {"list", "index", "index.html", ""})
+    @RequestMapping(value = {"list", "index", "index.jsp", ""})
     public ModelAndView getList(Country country,
                                 @RequestParam(required = false, defaultValue = "1") int page,
                                 @RequestParam(required = false, defaultValue = "10") int rows) {
