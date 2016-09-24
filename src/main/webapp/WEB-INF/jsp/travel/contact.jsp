@@ -1,11 +1,11 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@include file= "/WEB-INF/jsp/common.jsp" %>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 <meta http-equiv="Cache-Control" content="max-age=200" /> 
 <title>仿亞普達手机wap旅游网站模板下载联系我们--pppf.taobao.com整理用于学习</title>
 <meta name="viewport" content="width=320,user-scalable=false" />
-<link href="style.css" rel="stylesheet" type="text/css" />
+<link href="${path}/static/css/travel/style.css" rel="stylesheet" type="text/css" />
 <style type="text/css">
 .bggray {	color: #858585;
 	background-color: #ececec;
@@ -16,13 +16,13 @@
 </style>
 </head><body>
 <div id="wrapper">
-  <a href="index.jsp"><img src="images/travel_top_in.gif" alt="我的度假天" ></a>
+  <a href="${path}/travel/index"><img src="${path}/static/image/travel/travel_top_in.gif" alt="我的度假天" ></a>
   <div class="content">
     <table border="0" cellpadding="0" cellspacing="0" width="100%">
       <tbody>  <tr>
-          <td align="right"><a href="index.jsp">回選單</a></td>
+          <td align="right"><a href="${path}/travel/index">回選單</a></td>
         </tr><tr>
-        <td height="60"><img src="images/btn_contact.gif" alt="關於我們" ><br />
+        <td height="60"><img src="${path}/static/image/travel/btn_contact.gif" alt="關於我們" ><br />
           <form>
           <table width="100%" border="0" cellspacing="0" cellpadding="0">
             <tr>
@@ -62,7 +62,7 @@
           <td align="right">&nbsp;</td>
         </tr>
         <tr>
-        <td align="right"><a href="index.jsp">回選單</a></td>
+        <td align="right"><a href="${path}/travel/index">回選單</a></td>
       </tr> <tr>
         <td height="50" align="center" class="blue">服務電話：02-2789 2000<br/>地址：台北市南港路三段52號9樓<br/>
           <a href="../../../../../maps.google.com.tw/maps@f=q&source=s_q&hl=zh-TW&geocode=&q=_25E5_258F_25B0_25E5_258C_2597_25E5_25B8_2582_25E5_258D_2597_25E6_25B8040CBEB6D3" target="_blank">地圖</a></td>
