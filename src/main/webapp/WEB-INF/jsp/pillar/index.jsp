@@ -21,7 +21,7 @@
 <nav class="transition--fade">
     <%--<div class="nav-bar nav--absolute nav--transparent" data-fixed-at="200">
         <div class="nav-module logo-module left">
-            <a href="../../../../../../blog/Pillar%201.0.0/index.html">
+            <a href="../../../../../../blog/Pillar%201.0.0/index.jsp">
                 <img class="logo logo-dark" alt="logo" src="${path}/static/image/pillar/logo-dark.png" />
                 <img class="logo logo-light" alt="logo" src="${path}/static/image/pillar/logo-light.png" />
             </a>
