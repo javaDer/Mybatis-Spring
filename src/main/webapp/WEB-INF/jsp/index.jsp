@@ -159,7 +159,9 @@
             </table>
         </c:if>
     </div>
-    <div class="push"></div>
+    <a class="bshareDiv" href="http://www.bshare.cn/share">分享按钮</a>
+    <script type="text/javascript" charset="utf-8"
+            src="http://static.bshare.cn/b/button.js#uuid=&amp;style=5&amp;fs=4&amp;bgcolor=Orange"></script>
 </div>
 </body>
 </html>
