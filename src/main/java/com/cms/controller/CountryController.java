@@ -22,7 +22,7 @@ public class CountryController {
     @Autowired
     private CountryService countryService;
 
-    private String page_list = "covervid/index";
+    private String page_list = "pillar/index";
 
     private String redirect_list = "redirect:list";
 
