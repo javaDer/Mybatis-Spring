@@ -47,7 +47,6 @@ public class WeChatController {
         }
         //验证请求签名
         if(!signature.equals(SignatureUtil.generateEventMessageSignature(token,timestamp,nonce))){
-            System.out.println("The request signature is invalid");
             return;
         }
         if(inputStream!=null){

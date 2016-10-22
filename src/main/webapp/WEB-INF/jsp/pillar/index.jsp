@@ -12,6 +12,7 @@
     <link href="${path}/static/css/pillar/interface-icons.css" rel="stylesheet" type="text/css" media="all" />
     <link href="${path}/static/css/pillar/owl.carousel.css" rel="stylesheet" type="text/css" media="all" />
     <link href="${path}/static/css/pillar/lightbox.min.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="${path}/static/css/pillar/common.css" rel="stylesheet" type="text/css" media="all" />
     <link href="${path}/static/css/pillar/theme.css" rel="stylesheet" type="text/css" media="all" />
     <link href='https://fonts.googleapis.com/css?family=Lora:400,400italic,700%7CMontserrat:400,700' rel='stylesheet' type='text/css'>
 </head>
@@ -102,7 +103,7 @@
         <div class="container">
             <div class="row">
                 <div class="masonry">
-                    <div class="masonry__filters text-center" data-filter-all-text="Show All"></div>
+                    <div class="masonry__filters text-center" data-filter-all-text="显示全部"></div>
                     <div class="masonry__container masonry--animate">
                         <div class="col-sm-6 masonry__item" data-masonry-filter="digital">
                             <a href="#">
@@ -140,7 +141,7 @@
                             </a>
                         </div>
                         <!--end item-->
-                        <div class="col-sm-6 masonry__item" data-masonry-filter="digital">
+                        <div class="col-sm-6 masonry__item" data-masonry-filter="精品">
                             <a href="#">
                                 <div class="card card-3">
                                     <div class="card__image">
@@ -194,7 +195,7 @@
                             </a>
                         </div>
                         <!--end item-->
-                        <div class="col-sm-6 masonry__item" data-masonry-filter="packaging">
+                        <div class="col-sm-6 masonry__item" data-masonry-filter="礼品包">
                             <a href="#">
                                 <div class="card card-3">
                                     <div class="card__image">
@@ -257,117 +258,32 @@
         <!--end of container-->
     </section>
     <footer class="bg--dark footer-4">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-3 col-sm-4">
-                    <img alt="logo" class="logo" src="${path}/static/image/pillar/logo-light.png" />
-                    <p>
-                        <em>Digital Design Melbourne</em>
-                    </p>
-                    <ul class="footer__navigation">
-                        <li>
-                            <a href="#">
-                                <span>About Us</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <span>Services</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <span>Selected Work</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <span>Get In Touch</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <span>Careers</span>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="col-md-4 col-sm-8">
-                    <h6>Recent News</h6>
-                    <div class="twitter-feed">
-                        <div class="tweets-feed" data-widget-id="492085717044981760" data-amount="2"></div>
-                    </div>
-                </div>
-                <div class="col-md-4 col-md-offset-1 col-sm-12">
-                    <h6>Subscribe</h6>
-                    <p>
-                        Get monthly updates and free resources.
-                    </p>
-                    <form class="form--merge form--no-labels" action="http://mrareco.createsend.com/t/d/s/kieth/" method="post" id="subForm" data-error="Please fill all fields correctly." data-success="Thanks for signing up! Please check your inbox for confirmation email.">
-                        <p>
-                            <label for="fieldEmail">Email Address</label>
-                            <br />
-                            <input class="col-md-8 col-sm-6 validate-required validate-email" id="fieldEmail" name="cm-kieth-kieth" type="email" required />
-                        </p>
-                        <p>
-                            <button type="submit">Go</button>
-                        </p>
-                    </form>
-                    <h6>Connect with Us</h6>
-                    <ul class="social-list">
-                        <li>
-                            <a href="#">
-                                <i class="socicon-twitter"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <i class="socicon-dribbble"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <i class="socicon-vimeo"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <i class="socicon-instagram"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <i class="socicon-spotify"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <i class="socicon-behance"></i>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <!--end of row-->
-        </div>
-        <!--end of container-->
-        <div class="footer__lower">
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm-6 text-center-xs">
-                                <span class="type--fine-print">&copy; Copyright
-                                    <span class="update-year">2016</span> Medium Rare - All Rights Reserved</span>
-                    </div>
-                    <div class="col-sm-6 text-right text-center-xs">
-                        <a href="#top" class="inner-link top-link">
-                            <i class="interface-up-open-big"></i>
-                        </a>
-                    </div>
-                </div>
-                <!--end of row-->
-            </div>
-            <!--end of container-->
-        </div>
+    <div id="copyrights">
+    		<div class="inset">
+    			<div class="fl">
+
+    				<div class="logo"></div>
+    				<p>© 2020 武威膳禾食品有限公司, 版权所有<br>
+    <a href="http://www.miibeian.gov.cn" target="_blank">鲁ICP备12022271号</a></p>
+    			</div>
+    			<div class="fr">
+    				<div class="medias">
+    					<ul>
+    						<li class="weibo"><a href="http://weibo.com/yeelink2012" target="_blank"><img src="/resource/images/icon_weibo.png"></a></li>
+    					</ul>
+    				</div>
+    				<div class="nav">
+    					<ul>
+    						<li><a href="http://blog.yeelink.net/?feed=rss2" target="_blank">RSS Feeds</a></li>
+    						<li><a href="/developer/doc/2">使用条款</a></li>
+    						<li><a href="/developer/doc/16">常见问题</a></li>
+    						<li><a href="${path}/shanhe/contact">联系我们</a></li>
+    						<li><a href="http://blog.yeelink.net/?p=689" target="_blank">工作机会</a></li>
+    					</ul>
+    				</div>
+    			</div>
+    		</div>
+    	</div>
     </footer>
 </div>
 <script src="${path}/static/js/pillar/jquery-2.1.4.min.js"></script>
