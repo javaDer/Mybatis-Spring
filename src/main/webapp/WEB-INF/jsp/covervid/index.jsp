@@ -13,9 +13,7 @@
 	<link rel="stylesheet" href="${path}/static/css/covervid/normalize.css" />
 	<link rel="stylesheet" href="${path}/static/css/covervid/styles.css" />
 </head>
-
 <body>
-
 	<!-- Video Markup -->
 	<section class="masthead">
 		<video class="masthead-video" autoplay loop muted poster="${path}/static/image/covervid/poster.jpg">
@@ -30,12 +28,10 @@
 			<span>by Jonathan Besler</span>
 		</a>
 	</section>
-
 	<!-- Load Scripts -->
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 	<script src="${path}/static/js/covervid/covervid.js"></script>
 	<script src="${path}/static/js/covervid/scripts.js"></script>
-
 	<!-- Call CoverVid -->
 	<script type="text/javascript">
 		/* If using jQuery
