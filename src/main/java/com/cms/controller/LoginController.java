@@ -1,16 +1,21 @@
 package com.cms.controller;
 
+import com.alibaba.fastjson.JSONObject;
 import com.cms.model.UserInfo;
 import com.cms.service.UserInfoService;
 import com.cms.service.RedisService;
 import com.cms.model.TaotaoResult;
+import com.sun.net.httpserver.HttpServer;
 import org.apache.commons.lang.RandomStringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import tk.mybatis.mapper.entity.Example;
 
+import javax.servlet.http.HttpServletRequest;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -84,6 +89,13 @@ public class LoginController {
             map.put("message", "用户名密码错误");
             map.put("success", false);
         }
+        return map;
+    }
+    @RequestMapping(value = "/orders")
+    @ResponseBody
+    public Map<String, Object> orders(HttpServletRequest request,@RequestBody JSONObject payment ) {
+        Map<String, Object> map = new HashMap<String, Object>();
+
         return map;
     }
 
